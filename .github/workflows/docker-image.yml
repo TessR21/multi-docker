@@ -21,7 +21,7 @@ jobs:
         echo ${{secrets.DOCKER_PASSWORD}} | docker login -u $DOCKER_USER --password-stdin
         
     - name: Build Docker image
-      run: docker build ./client --file ./client/Dockerfile.dev --tag 1.0.0
+      run: docker build ./client --file ./client/Dockerfile.dev --tag latest
       
     - name: Push Docker image
-      run: docker push tessrajhunee/bootcamp-multi-docker:1.0.0:latest
+      run: docker push tessrajhunee/bootcamp-multi-docker:latest
