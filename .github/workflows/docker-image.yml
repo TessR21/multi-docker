@@ -23,5 +23,8 @@ jobs:
     - name: Build Docker image
       run: docker build ./client --file ./client/Dockerfile.dev --tag latest
       
+    - name: Add tag
+      run: docker tag bootcamp-multi-docker tessrajhunee/bootcamp-multi-docker
+      
     - name: Push Docker image
-      run: docker push tessrajhunee/bootcamp-multi-docker:latest
+      run: docker push tessrajhunee/bootcamp-multi-docker
