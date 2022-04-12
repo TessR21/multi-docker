@@ -20,7 +20,7 @@ jobs:
         name: Build & push Docker image
         with:
           image: repo/image
-          tags: latest
+          tags: v1, latest
           registry: ghcr.io/tessrajhunee/bootcamp-multi-docker
           dockerfile: ./client/Dockerfile.dev
           username: ${{ secrets.DOCKER_USERNAME }}
